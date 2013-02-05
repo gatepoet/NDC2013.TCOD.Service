@@ -1,0 +1,15 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Itera.Labs.AdvancedOpctopusDemo.WebApi</id>
+    <title>Web Api Service demo</title>
+    <version>1.0.0</version>
+    <authors>Kristoffer Rolf Deinoff</authors>
+    <owners>Kristoffer Rolf Deinoff</owners>
+    <licenseUrl>http://iteraconsulting.no</licenseUrl>
+    <projectUrl>http://iteraconsulting.no</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A sample project</description>
+    <releaseNotes>First release</releaseNotes>
+  </metadata>
+</package>
