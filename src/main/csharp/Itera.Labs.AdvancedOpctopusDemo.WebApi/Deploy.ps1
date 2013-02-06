@@ -5,8 +5,15 @@
 
 function Get-Port
 {
-	$appConfig = [xml](cat .\Itera.Labs.AdvancedOpctopusDemo.WebApi.exe.config)
-	$appConfig.configuration.appSettings.add | foreach { if ($_.key -eq 'Port') { $port = $_.value } }
+	$found = false
+	$appConfig = [xml](cat .\$ServiceConfig)
+	$appConfig.configuration.appSettings.add | foreach {
+		if ($_.key -eq 'Port') {
+			$port = $_.value
+			$found = true
+		}
+	}
+	if (!$found) $port = "8080"
 	return $port
 }
 
@@ -22,7 +29,7 @@ function Install-WebApi-Service
 
 		$frameworkDir = Get-FrameworkDirectory
 		Set-Alias install_util (Join-Path $frameworkDir "installutil.exe")
-		install_util Itera.Labs.AdvancedOpctopusDemo.WebApi.exe | Write-Host   
+		install_util $fullPath | Write-Host   
 	}
 	else
 	{
