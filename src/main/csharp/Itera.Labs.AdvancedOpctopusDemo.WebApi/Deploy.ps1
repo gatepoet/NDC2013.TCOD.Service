@@ -1,0 +1,1 @@
+﻿installutil Itera.Labs.AdvancedOpctopusDemo.WebApi.exe
