@@ -10,7 +10,7 @@ function Install-WebApi-Service
     Set-Alias install_util (Join-Path $frameworkDir "installutil.exe")
     install_util Itera.Labs.AdvancedOpctopusDemo.WebApi.exe | Write-Host   
 
-    Write-Host "Setting rights on http://+:$Port:Port/"
+    Write-Host "Setting rights on http://+:$Port/"
 	netsh http add urlacl url=http://+:$Port/ user="NT AUTHORITY\NETWORK SERVICE" | Write-Host 
 }
 Install-WebApi-Service
