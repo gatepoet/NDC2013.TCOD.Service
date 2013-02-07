@@ -84,6 +84,9 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="DeployUtil.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Deploy.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
