@@ -30,9 +30,7 @@ function Install-WebApi-Service($name, $executable)
 
 		$frameworkDir = Get-FrameworkDirectory
 		Set-Alias install_util (Join-Path $frameworkDir "installutil.exe")
-		install_util $fullPath | Write-Host  
-		$service = Get-Service $name 
-		Write-Host $service.User
+		install_util $fullPath | Write-Host
 	}
 	else
 	{
