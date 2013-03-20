@@ -33,6 +33,9 @@ namespace Itera.Labs.AdvancedOpctopusDemo.WebApi
             _config.Routes.MapHttpRoute("DefaultApi",
                 "api/{controller}/{id}",
                 new { id = RouteParameter.Optional });
+            
+            var appXmlType = _config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            _config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
         }
 
         protected override void OnStart(string[] args)
