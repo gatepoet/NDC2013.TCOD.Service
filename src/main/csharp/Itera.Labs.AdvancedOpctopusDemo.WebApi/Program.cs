@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ServiceProcess;
 
-namespace Itera.Labs.AdvancedOpctopusDemo.WebApi
+namespace NDC2013.TCOD.Service
 {
     static class Program
     {

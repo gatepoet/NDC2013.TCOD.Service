@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.SelfHost;
 
-namespace Itera.Labs.AdvancedOpctopusDemo.WebApi
+namespace NDC2013.TCOD.Service
 {
     public partial class HttpApiService : ServiceBase
     {
@@ -24,18 +18,23 @@ namespace Itera.Labs.AdvancedOpctopusDemo.WebApi
             InitializeComponent();
 
             _settings = new Settings();
-            _settings.Load();
+            Settings.Load();
             _eventLog = new EventLog();
             _eventLog.Source = this.GetType().Name;
             _eventLog.Log = "Application";
-            _eventLog.WriteEntry("Starting webapi server at " + _settings.BaseAddress);
-            _config = new HttpSelfHostConfiguration(_settings.BaseAddress);
+            _eventLog.WriteEntry("Starting webapi server at " + Settings.BaseAddress);
+            _config = new HttpSelfHostConfiguration(Settings.BaseAddress);
             _config.Routes.MapHttpRoute("DefaultApi",
                 "api/{controller}/{id}",
                 new { id = RouteParameter.Optional });
             
             var appXmlType = _config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
             _config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+        }
+
+        public Settings Settings
+        {
+            get { return _settings; }
         }
 
         protected override void OnStart(string[] args)

@@ -1,4 +1,4 @@
-﻿namespace Itera.Labs.AdvancedOpctopusDemo.WebApi
+﻿namespace NDC2013.TCOD.Service
 {
     partial class HttpApiService
     {

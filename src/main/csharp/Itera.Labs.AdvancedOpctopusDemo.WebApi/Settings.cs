@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 
-namespace Itera.Labs.AdvancedOpctopusDemo.WebApi
+namespace NDC2013.TCOD.Service
 {
     public class Settings
     {

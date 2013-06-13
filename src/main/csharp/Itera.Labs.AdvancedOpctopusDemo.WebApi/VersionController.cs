@@ -1,21 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Configuration;
 using System.Diagnostics;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Http;
+using Newtonsoft.Json.Linq;
 
-namespace Itera.Labs.AdvancedOpctopusDemo.WebApi
+namespace NDC2013.TCOD.Service
 {
     public class VersionController : ApiController
     {
-        public string Get()
+        public JObject Get()
         {
             var assembly = Assembly.GetAssembly(typeof(Program));
             var versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
-            return versionInfo.ProductVersion;
+            var environment = ConfigurationManager.AppSettings["Environment"];
+            return new JObject(
+                new
+                    {
+                        Environment = environment,
+                        Version = versionInfo.ProductVersion
+                    });
         }
     }
 }

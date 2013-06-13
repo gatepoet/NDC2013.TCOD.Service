@@ -6,29 +6,58 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.SelfHost;
+using NDC2013.TCOD.Service;
 using NUnit.Framework;
 
-namespace Itera.Labs.AdvancedOpctopusDemo.WebApi.Tests
+namespace NDC2013.TCOD.Service.Tests
 {
     [TestFixture]
     public class ConfigTest
     {
         [Test]
-        public void test()
+        public void IntegrationTest()
         {
             var service = new HttpApiService();
 
             service.Start();
 
+            try
+            {
+                HttpClient client = new HttpClient();
+                client.GetStringAsync(service.Settings.BaseAddress).ContinueWith(
+                    getTask =>
+                        {
+                            if (getTask.IsCanceled)
+                            {
+                                Assert.Fail("Request was canceled");
+                            }
+                            else if (getTask.IsFaulted)
+                            {
+                                Assert.Fail("Request failed: {0}", getTask.Exception);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Client received: {0}", getTask.Result);
+                            }
+                        });
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Could not start server: {0}", e.GetBaseException().Message);
+                Console.WriteLine("Hit ENTER to exit...");
+                Console.ReadLine();
+            }
+            finally
+            {
+                if (service != null)
+                {
+                    service.Stop();
+                }
+            }
 
-            service.Stop();
         }
     }
-}
 
- 
-namespace SelfHost 
-{ 
     public class HelloController : ApiController 
     { 
         public string Get() 
@@ -55,7 +84,7 @@ namespace SelfHost
                     name: "DefaultApi", 
                     routeTemplate: "api/{controller}/{id}", 
                     defaults: new { id = RouteParameter.Optional } 
-                ); 
+                    ); 
  
                 // Create server 
                 server = new HttpSelfHostServer(config); 
@@ -68,20 +97,20 @@ namespace SelfHost
                 HttpClient client = new HttpClient(); 
                 client.GetStringAsync(_address).ContinueWith( 
                     getTask => 
-                    { 
-                        if (getTask.IsCanceled) 
                         { 
-                            Console.WriteLine("Request was canceled"); 
-                        } 
-                        else if (getTask.IsFaulted) 
-                        { 
-                            Console.WriteLine("Request failed: {0}", getTask.Exception); 
-                        } 
-                        else 
-                        { 
-                            Console.WriteLine("Client received: {0}", getTask.Result); 
-                        } 
-                    }); 
+                            if (getTask.IsCanceled) 
+                            { 
+                                Console.WriteLine("Request was canceled"); 
+                            } 
+                            else if (getTask.IsFaulted) 
+                            { 
+                                Console.WriteLine("Request failed: {0}", getTask.Exception); 
+                            } 
+                            else 
+                            { 
+                                Console.WriteLine("Client received: {0}", getTask.Result); 
+                            } 
+                        }); 
                 Console.ReadLine(); 
             } 
             catch (Exception e) 
@@ -99,5 +128,5 @@ namespace SelfHost
                 } 
             } 
         } 
-    } 
-} 
+    }
+}

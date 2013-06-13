@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itera.Labs.AdvancedOpctopusDemo.WebApi", "main\csharp\Itera.Labs.AdvancedOpctopusDemo.WebApi\Itera.Labs.AdvancedOpctopusDemo.WebApi.csproj", "{7213F980-A50C-4B2D-9538-228B5FA165B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDC2013.TCOD.Service", "main\csharp\Itera.Labs.AdvancedOpctopusDemo.WebApi\NDC2013.TCOD.Service.csproj", "{7213F980-A50C-4B2D-9538-228B5FA165B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8F4BD9CB-83EF-40D2-B711-5D2687F65E27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Itera.Labs.AdvancedOpctopusDemo.WebApi.Tests", "test\csharp\Itera.Labs.AdvancedOpctopusDemo.WebApi.Tests\Itera.Labs.AdvancedOpctopusDemo.WebApi.Tests.csproj", "{8928E836-A679-4482-B21D-F311BDEF8977}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDC2013.TCOD.Service.Tests", "test\csharp\Itera.Labs.AdvancedOpctopusDemo.WebApi.Tests\NDC2013.TCOD.Service.Tests.csproj", "{8928E836-A679-4482-B21D-F311BDEF8977}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
