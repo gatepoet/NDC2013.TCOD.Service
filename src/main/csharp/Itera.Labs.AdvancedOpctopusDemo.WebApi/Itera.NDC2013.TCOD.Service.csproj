@@ -92,9 +92,15 @@
     </None>
     <None Include="Itera.NDC2013.TCOD.Service.nuspec" />
     <None Include="packages.config" />
-    <Content Include="Itera.NDC2013.TCOD.Service.exe.Development.config" />
-    <Content Include="Itera.NDC2013.TCOD.Service.exe.Production.config" />
-    <Content Include="Itera.NDC2013.TCOD.Service.exe.Test.config" />
+    <None Include="Itera.NDC2013.TCOD.Service.exe.Development.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Itera.NDC2013.TCOD.Service.exe.Production.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Itera.NDC2013.TCOD.Service.exe.Test.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ProjectInstaller.resx">
