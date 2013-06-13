@@ -8,7 +8,7 @@ namespace Itera.NDC2013.TCOD.Service
 {
     public class VersionController : ApiController
     {
-        public JObject Get()
+        public object Get()
         {
             var assembly = Assembly.GetAssembly(typeof(Program));
             var versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
