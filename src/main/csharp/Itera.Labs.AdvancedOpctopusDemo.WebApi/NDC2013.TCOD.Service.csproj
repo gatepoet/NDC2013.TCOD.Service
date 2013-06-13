@@ -90,6 +90,7 @@
     <None Include="Deploy.ps1">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="NDC2013.TCOD.nuspec" />
     <None Include="packages.config" />
     <None Include="App.Development.config" />
     <None Include="App.Production.config" />
