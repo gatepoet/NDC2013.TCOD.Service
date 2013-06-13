@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Itera.Labs.AdvancedOpctopusDemo.WebApi")]
+[assembly: AssemblyTitle("Itera.NDC2013.TCOD.Service")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Itera.Labs.AdvancedOpctopusDemo.WebApi")]
+[assembly: AssemblyProduct("Itera.NDC2013.TCOD.Service")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
