@@ -13,12 +13,11 @@ namespace Itera.NDC2013.TCOD.Service
             var assembly = Assembly.GetAssembly(typeof(Program));
             var versionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
             var environment = ConfigurationManager.AppSettings["Environment"];
-            return new JObject(
-                new
+            return new
                     {
                         Environment = environment,
                         Version = versionInfo.ProductVersion
-                    });
+                    };
         }
     }
 }
