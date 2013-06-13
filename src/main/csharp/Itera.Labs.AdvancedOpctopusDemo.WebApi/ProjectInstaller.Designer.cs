@@ -41,7 +41,7 @@
             // 
             this.serviceInstaller1.Description = "WebApi self host";
             this.serviceInstaller1.DisplayName = "Itera.NDC2013.TCOD.Service";
-            this.serviceInstaller1.ServiceName = "Itera.NDC2013.TCOD.Service";
+            this.serviceInstaller1.ServiceName = "HttpApiService";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
