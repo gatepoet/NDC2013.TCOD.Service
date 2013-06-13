@@ -5,10 +5,10 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8928E836-A679-4482-B21D-F311BDEF8977}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NDC2013.TCOD.Service.Tests</RootNamespace>
-    <AssemblyName>NDC2013.TCOD.Service.Tests</AssemblyName>
+    <RootNamespace>Itera.NDC2013.TCOD.Service.Tests</RootNamespace>
+    <AssemblyName>Itera.NDC2013.TCOD.Service.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -60,7 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ConfigTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,9 +70,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\main\csharp\Itera.Labs.AdvancedOpctopusDemo.WebApi\NDC2013.TCOD.Service.csproj">
+    <ProjectReference Include="..\..\..\main\csharp\Itera.Labs.AdvancedOpctopusDemo.WebApi\Itera.NDC2013.TCOD.Service.csproj">
       <Project>{7213F980-A50C-4B2D-9538-228B5FA165B5}</Project>
-      <Name>NDC2013.TCOD.Service</Name>
+      <Name>Itera.NDC2013.TCOD.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

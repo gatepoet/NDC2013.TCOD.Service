@@ -8,8 +8,8 @@
     <ProjectGuid>{7213F980-A50C-4B2D-9538-228B5FA165B5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NDC2013.TCOD.Service</RootNamespace>
-    <AssemblyName>NDC2013.TCOD.Service</AssemblyName>
+    <RootNamespace>Itera.NDC2013.TCOD.Service</RootNamespace>
+    <AssemblyName>Itera.NDC2013.TCOD.Service</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

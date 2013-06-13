@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace NDC2013.TCOD.Service
+namespace Itera.NDC2013.TCOD.Service
 {
     public class Settings
     {

@@ -4,7 +4,7 @@ using System.ServiceProcess;
 using System.Web.Http;
 using System.Web.Http.SelfHost;
 
-namespace NDC2013.TCOD.Service
+namespace Itera.NDC2013.TCOD.Service
 {
     public partial class HttpApiService : ServiceBase
     {

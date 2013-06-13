@@ -1,4 +1,4 @@
-﻿namespace NDC2013.TCOD.Service
+﻿namespace Itera.NDC2013.TCOD.Service
 {
     partial class HttpApiService
     {

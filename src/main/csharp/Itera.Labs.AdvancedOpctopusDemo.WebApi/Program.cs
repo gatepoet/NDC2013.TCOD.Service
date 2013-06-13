@@ -1,6 +1,6 @@
 ﻿using System.ServiceProcess;
 
-namespace NDC2013.TCOD.Service
+namespace Itera.NDC2013.TCOD.Service
 {
     static class Program
     {

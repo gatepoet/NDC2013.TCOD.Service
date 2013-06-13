@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Web.Http;
 using Newtonsoft.Json.Linq;
 
-namespace NDC2013.TCOD.Service
+namespace Itera.NDC2013.TCOD.Service
 {
     public class VersionController : ApiController
     {
