@@ -92,9 +92,9 @@
     </None>
     <None Include="Itera.NDC2013.TCOD.Service.nuspec" />
     <None Include="packages.config" />
-    <None Include="App.Development.config" />
-    <None Include="App.Production.config" />
-    <None Include="App.Test.config" />
+    <Content Include="Itera.NDC2013.TCOD.Service.exe.Development.config" />
+    <Content Include="Itera.NDC2013.TCOD.Service.exe.Production.config" />
+    <Content Include="Itera.NDC2013.TCOD.Service.exe.Test.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ProjectInstaller.resx">
